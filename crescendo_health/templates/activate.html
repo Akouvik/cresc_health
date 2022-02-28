@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crescendo Health!</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      text {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        color: #fff;
+        background-color: #e00833;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to the future of health</h1>
+    <div>
+      <h4>Please provide your acivation code</h4>
+      <form method="POST">
+        <input name="text" />
+        <input type="submit" />
+        {% block content %} {% if data %}
+        <text>{{data}}</text>
+        {% endif %} {% endblock content %}
+      </form>
+    </div>
+  </body>
+</html>

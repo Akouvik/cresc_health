@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crescendo Health!</title>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #ddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f6d656;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>{{name}}'s public repositories</h3>
+    <div>
+      <table>
+        <tr>
+          <th>Repo Name</th>
+          <th>Repo Url</th>
+        </tr>
+        <ul>
+          {% for item in data %}
+          <tr>
+            <td>{{item[0]}}</td>
+            <td><a href="{{item[1]}}">{{item[1]}}</a></td>
+          </tr>
+          {% endfor %}
+        </ul>
+      </table>
+    </div>
+  </body>
+</html>
